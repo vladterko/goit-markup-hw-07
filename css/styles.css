@@ -688,7 +688,7 @@ body {
     transition: opacity var(--animation), visibility var(--animation);
 }
 
-.backdrop.is-hidden {
+.backdrop--is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -711,12 +711,12 @@ body {
     transition: transform var(--animation), opacity var(--animation);
 }
 
-.backdrop.is-hidden .modal {
+.backdrop--is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.3);
     opacity: 0;
 }
 
-.modal-btn {
+.modal__btn {
     position: absolute;
     top: 8px;
     right: 8px;
@@ -737,13 +737,13 @@ body {
     transition: fill var(--animation);
 }
 
-.modal-btn:hover,
-.modal-btn:focus {
+.modal__btn:hover,
+.modal__btn:focus {
     fill: currentColor;
 }
 
 /* Request-form */
-.form-request {
+.request {
     width: 100%;
     height: 100%;
     padding: 40px;
@@ -751,7 +751,7 @@ body {
     text-align: center;
 }
 
-.form-request-title {
+.request__title {
     display: block;
     margin-bottom: 12px;
 
@@ -761,7 +761,7 @@ body {
     letter-spacing: 0.03em;
 }
 
-.form-request-label {
+.request__label {
     position: relative;
 
     display: flex;
@@ -770,7 +770,7 @@ body {
     margin-bottom: 10px;
 }
 
-.request-label-name {
+.request__label-name {
     margin-bottom: 4px;
 
     font-size: 12px;
@@ -779,7 +779,7 @@ body {
     color: var(--secondary-txt-clr);
 }
 
-.form-request-input {
+.request__input {
     width: 448px;
     height: 40px;
     padding: 12px 42px;
@@ -791,38 +791,38 @@ body {
     transition: border-color var(--animation);
 }
 
-.form-request-input:hover,
-.form-request-input:hover+.form-request-icon {
+.request__input:hover,
+.request__input:hover+.request__icon {
     border-color: var(--accent-clr);
     fill: var(--accent-clr);
     cursor: pointer;
 }
 
-.form-request-input:focus,
-.form-request-input:focus+.form-request-icon,
-.form-request-input:not(:placeholder-shown),
-.form-request-input:not(:placeholder-shown)+.form-request-icon {
+.request__input:focus,
+.request__input:focus+.request__icon,
+.request__input:not(:placeholder-shown),
+.request__input:not(:placeholder-shown)+.request__icon {
     border-color: var(--accent-clr);
     fill: var(--accent-clr);
     cursor: auto;
 }
 
-.form-request-icon {
+.request__icon {
     fill: currentColor;
     transition: fill var(--animation);
 }
 
-.form-request-icon {
+.request__icon {
     position: absolute;
     bottom: 11px;
     left: 12px;
 }
 
-.form-request-label.comment {
+.request__label--indent {
     margin-bottom: 20px;
 }
 
-.form-request-input.comment {
+.request__input--comment {
     width: 448px;
     height: 120px;
     padding: 12px 16px;
@@ -834,38 +834,38 @@ body {
     resize: none;
 }
 
-.form-request-input.comment::placeholder {
+.request__input--comment::placeholder {
     color: rgba(117, 117, 117, 0.5);
 }
 
-.form-agreement-label {
+.agreement-checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.form-agreement-icon {
+.checkbox-icon {
     margin-right: 8px;
 }
 
-.icon-uncheck,
-.icon-checked {
+.checkbox-icon--uncheck,
+.checkbox-icon--checked {
     opacity: 0;
 
     transition: opacity var(--animation);
 }
 
-.form-agreement-input:not(:checked)+.form-agreement-icon>.icon-uncheck {
+.agreement-checkbox__input:not(:checked)+.checkbox-icon>.checkbox-icon--uncheck {
     opacity: 1;
 }
 
-.form-agreement-input:checked+.form-agreement-icon>.icon-checked {
+.agreement-checkbox__input:checked+.checkbox-icon>.checkbox-icon--checked {
     opacity: 1;
 }
 
-.form-agreement-name,
-.form-agreement-link {
+.agreement-checkbox__text,
+.agreement-checkbox__link {
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
@@ -873,7 +873,7 @@ body {
     user-select: none;
 }
 
-.form-agreement-link {
+.agreement-checkbox__link {
     color: var(--accent-clr);
     /* text-decoration: none;
     border-bottom: 1px solid var(--accent-clr); */
@@ -882,13 +882,13 @@ body {
     transition: color var(--animation), border-color var(--animation);
 }
 
-.form-agreement-link:hover,
-.form-agreement-link:focus {
+.agreement-checkbox__link:hover,
+.agreement-checkbox__link:focus {
     color: var(--sec-acc-clr);
     border-color: var(--sec-acc-clr);
 }
 
-.form-request .btn {
+.request__btn {
     display: inline-flex;
 }
 
